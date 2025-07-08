@@ -4,6 +4,7 @@ import PatientList from "../components/patients/PatientList";
 import AppointmentForm from "../components/appointments/AppointmentForm";
 import AppointmentList from "../components/appointments/AppointmentList";
 import { v4 as uuid } from "uuid";
+import { useAuth } from "../auth/AuthContext";
 
 // Utility functions
 const getPatients = () => JSON.parse(localStorage.getItem("patients")) || [];
@@ -37,6 +38,7 @@ const AdminDashboard = () => {
   const [showPatientForm, setShowPatientForm] = useState(false);
   const [showAppointmentForm, setShowAppointmentForm] = useState(false);
   const [activeTab, setActiveTab] = useState("patients");
+  const { user, logout } = useAuth();
 
 
   const getPatientNameById = (patientId) => {
@@ -154,7 +156,16 @@ const handleSavePatient = (patient) => {
 
   return (
     <div className="p-6 bg-gray-50 min-h-screen">
-      <h1 className="text-3xl font-bold mb-8 text-gray-800">Admin Dashboard</h1>
+      <div className="flex justify-between items-center mb-8">
+        <h1 className="text-3xl font-bold mb-8 text-gray-800">Admin Dashboard</h1>
+          <button
+            onClick={logout}
+            className="px-4 py-2 bg-red-100 text-red-700 rounded-md hover:bg-red-200 transition"
+          >
+            Logout
+          </button>
+      </div>
+      
 
       {/* KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

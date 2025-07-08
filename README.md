@@ -1,12 +1,41 @@
-# React + Vite
+# ENTNT Dental Center Management System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern dental clinic management dashboard with patient records, appointment scheduling, and treatment tracking.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Admin Features
+- 📊 Dashboard with key performance indicators
+- 👥 Patient management (CRUD operations)
+- 📅 Appointment scheduling and tracking
+- 💰 Treatment cost recording
+- 📁 File attachments for treatments
+- 🔐 Role-based access control
 
-## Expanding the ESLint configuration
+### Patient Features
+- 👀 View personal treatment history
+- 📅 Check upcoming appointments
+- 💳 View treatment costs
+- 📄 Access attached files (invoices, x-rays)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies Used
+
+- **Frontend**: React 18, React Router 6
+- **Styling**: Tailwind CSS 3
+- **State Management**: React Context API
+- **Local Storage**: For data persistence
+- **Animation**: Framer Motion
+- **Form Handling**: Custom form validation
+
+## Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/dental-central-management.git
+   cd dental-central-management
+
+Admin Credentials : 
+   Email : admin@entnt.in
+   password : admin123
+
+Patient Credentials : You will get it , when you add one using admin dashboard.

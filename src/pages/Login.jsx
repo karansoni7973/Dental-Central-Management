@@ -98,9 +98,7 @@ const Login = () => {
             />
           </div>
 
-          <div className="text-right text-xs text-blue-600 hover:underline cursor-pointer">
-            Forgot password?
-          </div>
+         
 
           <button
             type="submit"
@@ -112,20 +110,6 @@ const Login = () => {
             {isLoading ? "Signing in..." : "Get Started"}
           </button>
         </form>
-
-        <div className="mt-6 text-center text-xs text-gray-500">or sign in with</div>
-
-        <div className="flex justify-center gap-4 mt-3">
-          <button className="bg-white p-2 rounded-lg shadow hover:shadow-md">
-            <img src="/google-icon.svg" alt="Google" className="w-5 h-5" />
-          </button>
-          <button className="bg-white p-2 rounded-lg shadow hover:shadow-md">
-            <img src="/facebook-icon.svg" alt="Facebook" className="w-5 h-5" />
-          </button>
-          <button className="bg-white p-2 rounded-lg shadow hover:shadow-md">
-            <img src="/apple-icon.svg" alt="Apple" className="w-5 h-5" />
-          </button>
-        </div>
       </motion.div>
     </div>
   );
