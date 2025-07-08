@@ -14,7 +14,20 @@ export const AuthProvider = ({ children }) => {
   });
 
   const login = (email, password) => {
-    const found = mockUsers.find(u => u.email === email && u.password === password);
+    // First check localStorage users
+    const storedUsers = JSON.parse(localStorage.getItem("users")) || [];
+    const found = storedUsers.find(u => u.email === email && u.password === password);
+    
+    // Fallback to mock users (for initial setup)
+    if (!found) {
+      const mockUser = mockUsers.find(u => u.email === email && u.password === password);
+      if (mockUser) {
+        setUser(mockUser);
+        localStorage.setItem("user", JSON.stringify(mockUser));
+        return { success: true };
+      }
+    }
+
     if (found) {
       setUser(found);
       localStorage.setItem("user", JSON.stringify(found));
